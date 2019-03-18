@@ -1,0 +1,74 @@
+/*Author lucaslpsan*/
+@font-face {
+    font-family: "Cinzel";
+    src: url("../font/Cinzel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: black;
+}
+canvas{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+main{
+    background: white;
+    font-family: 'Cinzel', serif;
+    height: 72%;
+    width: 40%;
+    padding: 1.5em;
+    display: ruby-base;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.6em;
+}
+@media screen and (max-width: 900px){
+    main{
+        width: 85%;
+        height: 84%;
+        top: 53%;
+        padding: 1em;
+    }
+    h1{
+        margin: 0;
+    }
+}
+.center{
+    text-align: center
+}
+article{
+    display: flex;
+    margin: 0.5em;
+}
+article label{
+    align-self: center;
+    margin-left: 0.6em;
+}
+article img{
+    object-fit: contain;
+}
+section{
+    margin: 1em;
+}
+.item{
+    margin: 0 0.5em;
+}
+details{
+    font-size: 70%;
+}
+a {
+    color: inherit;
+}
+article a:hover {
+	background:#ff0; 
+	color:#f00;
+}

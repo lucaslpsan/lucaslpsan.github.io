@@ -271,31 +271,45 @@ canvas.addEventListener('mousemove', function(e){
     // console.log(mouse_ball);
 });
 
-const nightMode = document.querySelector('#light-mode');
+/*
+ * Autor: Willian Justen
+ * https://willianjusten.com.br
+*/
+
+// pegamos o valor no localStorage
+const nightModeStorage = localStorage.getItem('gmtNightMode');
+const nightMode = document.querySelector('#night-mode');
+// pega o valor do meta tag
+const metaThemeColor = document.querySelector("meta[name=theme-color]");
+
+// caso tenha o valor no localStorage
+if (nightModeStorage) {
+    // ativa o night mode
+    document.documentElement.classList.add('night-mode');
+    // pinta o theme color na meta tag
+    metaThemeColor.setAttribute("content", '#2b2b2b');
+    // já deixa o input marcado como ativo
+    nightMode.checked = false;
+}
 
 // ao clicar mudaremos as cores
 nightMode.addEventListener('click', () => {
-    // adiciona a classe `light-mode` ao html
-    document.documentElement.classList.toggle('light-mode');
-});
+    // adiciona a classe `night-mode` ao html
+    document.documentElement.classList.toggle('night-mode');
 
-// Contrai e descontrai o texto dos código de terceiros usados aqui
-var links = document.getElementsByClassName('links').item(0);
-const outsource = document.querySelector('#outsource');
-
-outsource.addEventListener('click', () => {
-    if(links.getAttribute('style') == 'display: none;'){
-        links.setAttribute('style', 'display: block;');
-    }else{
-        links.setAttribute('style', 'display: none;');
+    // se tiver a classe night-mode
+    if ( document.documentElement.classList.contains('night-mode') ) {
+        // salva o tema no localStorage
+        localStorage.setItem('gmtNightMode', true);
+        // pinta o theme color na meta tag
+        metaThemeColor.setAttribute("content", '#2b2b2b');
+        return;
     }
+    // senão remove
+    localStorage.removeItem('gmtNightMode');
+    // senão bota a cor original
+    metaThemeColor.setAttribute("content", '#20a0ff');
 });
-
-
-
-
-
-
 
 
 

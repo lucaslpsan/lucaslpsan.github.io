@@ -2,61 +2,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lucas Lopes</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/light-mode.css">
     <script defer src="js/principal.js"></script>
 </head>
 <body>
-    <div class="button">
-        <label class="switch">
-                <input id="light-mode" type="checkbox" aria-label="light-mode">
-                <span class="slider round"></span>
+    <canvas id="principal"></canvas>
+    <div id="toggle">
+        <label class="el-switch" title="Modo mais escuro">
+            <input id="night-mode" type="checkbox" name="switch" checked>
+            <span class="el-switch-style"></span>
         </label>
     </div>
-    <canvas id="principal"></canvas>
-    <pre id="cont" class="container">
-        <h1>Lucas Lopes - lucaslpsan</h1>
-        <section class="row">
-                <img class="item" src="img/share-post-symbol.png" alt="Projetos">
-                <label class="item label"><a href="#" title="Tradução da terceira edição">◆ Eloquent Javascript - 3ª Edição Traduzida</a></label>
-        </section>
-        <section class="row">
-            <img class="item" src="img/graduation-cap.png" alt="graduation-cap">
-            <label class="item label">Bacharel em Sistemas de Informação - UPIS/Brasília (2014-2017)</label>
-        </section>
-        <section class="row">
-                <img class="item" src="img/code.png" alt="Linguagens">
-                <label class="item label">JAVA, Javascript, HTML, CSS</label>
-        </section>
-        <section class="row">
-                <img class="item" src="img/database.png" alt="Banco de Dados">
-                <label class="item label">Oracle 12c, PL/SQL, BI</label>
-        </section>
-        <section class="row">
-                <img class="item" src="img/map-marker.png" alt="Localização">
-                <label class="item label">Brasília - DF - Brasil <img src="img/brazil.png" alt="Brasil" title="Brasilzão"></label>
-        </section>
-        <section class="row img">
-            <a class="item" href="https://github.com/lucaslpsan"><img src="img/github-sign.png" alt="Meu GitHub"></a>
-            <a class="item" href="https://twitter.com/lucaslpsan"><img src="img/twitter-sign.png" alt="Meu Twitter"></a>
-            <a class="item" href="https://www.linkedin.com/in/lucaslpsan/"><img src="img/linkedin-sign.png" alt="Meu Linkedin"></a>
-            <a class="item" href="https://www.transifex.com/user/profile/lucaslpsan/"><img src="img/transifex.png" alt="Transifex"></a>
-        </section>
 
-        <button id="outsource" title="Obrigado por compartilharem!">Third-party</button>
-
-        <div class="links" style="display: none;">
+    <main>
+        <h1 class="center">Lucas Lopes - lucaslpsan</h1>
+        <article>
+                <img src="img/external-link-symbol.png" alt="Projetos" title="Projetos">
+                <label><a href="#" title="Tradução da terceira edição">◆ Eloquent Javascript - 3ª Edição Traduzida</a></label>
+            </article>
+        <article>
+            <img src="img/graduation-cap.png" alt="Graduação" title="Graduação">
+            <label>Bacharel em Sistemas de Informação - UPIS/Brasília (2014-2017)</label>
+        </article>
+        <article>
+                <img src="img/code.png" alt="Linguagens" title="Linguagens">
+                <label>JAVA, Javascript, HTML, CSS</label>
+        </article>
+        <article>
+                <img src="img/database.png" alt="Banco de dados" title="Banco de dados">
+                <label>Oracle 12c, PL/SQL, BI</label>
+        </article>
+        <article>
+                <img src="img/map-marker.png" alt="Local" title="Local">
+                <label>Brasília - DF - Brasil <img class="not-light-mode" src="img/brazil.png" alt="Brasil" title="Brasilzão"></label>
+        </article>
+        <section class="center">
+                <a class="item" href="https://github.com/lucaslpsan"><img src="img/github-sign.png" alt="Meu GitHub"></a>
+                <a class="item" href="https://twitter.com/lucaslpsan"><img src="img/twitter-sign.png" alt="Meu Twitter"></a>
+                <a class="item" href="https://www.linkedin.com/in/lucaslpsan/"><img src="img/linkedin-sign.png" alt="Meu Linkedin"></a>
+                <a class="item" href="https://www.transifex.com/user/profile/lucaslpsan/"><img src="img/transifex.png" alt="Transifex"></a>
+        </section>   
+        <details class="center">
+            <summary>Third-party</summary>
             Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" 
             title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"
             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
             Particles Random Animation in Canvas by <a href="https://codepen.io/jkiss" title="木马人">木马人</a>
-            Toggle Switch by <a href="https://www.w3schools.com/howto/howto_css_switch.asp" title="W3Schools">W3Schools</a>
+            Toggle Switch by <a href="https://github.com/EvanLiu2968/el-checkbox" title="evanliu2968">evanliu2968</a>
             Javascript modo claro by <a href="https://willianjusten.com.br/" title="Willian Justin">Willian Justin</a>
             Thanks! ❤️
-        </div>
-    </pre>
+        </details>
+    </main>
 </body>
 </html>
