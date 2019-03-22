@@ -62,6 +62,9 @@ section{
 .item{
     margin: 0 0.5em;
 }
+.item img{
+    width: 32px;
+}
 details{
     font-size: 70%;
 }
