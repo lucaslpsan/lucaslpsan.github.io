@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat-Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../font/Montserrat-SemiBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    /* background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%); */
+    /* background-image: linear-gradient( 135deg, #69FF97 10%, #00E4FF 100%); */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.grid-container {
+    position: absolute;
+    width: 97%;
+    display: grid;
+    grid-template-rows: 1fr 4fr 5fr;
+    grid-gap: 20px;
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+@media screen and (max-width: 800px){
+    .grid-container{
+        grid-template-rows: 0.8fr 1.8fr 6fr;
+    }
+    .box{
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+    }
+}
+#nav{
+    justify-self: right;
+}
+li a{
+    display: block;
+    padding: 10px 10px;
+}
+a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover{
+    -webkit-filter: invert(100%);
+    -o-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: invert(100%);
+}
+ul{
+    margin: 0;
+    list-style-type: none;
+}
+li{
+    float: left;
+}
+li img{
+    height: 2em;
+    filter: invert(100%)
+}
+img{
+    /* width: 70px; */
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+#language{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#language img{
+    display: inline;
+    margin: 0.5em;
+    
+}
+.center{
+    justify-self: center;
+}
+h1{
+    margin: 0;
+}
+p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+strong{
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+#links{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#links img{
+    height: 3em;
+    margin: 0.5em;
+}
+#links a{
+    padding: 0;
+}
+#footer{
+    display: inline;
+    height: 1.5em;
+}
