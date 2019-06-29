@@ -1,16 +1,18 @@
 @font-face {
     font-family: "Montserrat";
     font-display: optional;
-    src: url("../font/Montserrat-Light.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    src: url("../font/Montserrat-Light.woff2") format("woff2"),
+         url("../font/Montserrat-Light.woff") format("woff");
 }
 @font-face {
     font-family: "Montserrat-Bold";
     font-display: optional;
-    src: url("../font/Montserrat-SemiBold.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    src: url("../font/Montserrat-SemiBold.woff2") format("woff2"),
+         url("../font/Montserrat-SemiBold.woff") format("woff");
 }
 body{
     background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
@@ -70,7 +72,6 @@ li img{
     filter: invert(100%)
 }
 img{
-    /* width: 70px; */
     height: 70px;
     display: block;
     margin-left: auto;
