@@ -54,4 +54,19 @@ window.onload = function () {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
+
+    //Projects by lucaslpsan
+
+    let projectElement = document.querySelector('#projects div');
+    let pElements = projectElement.querySelectorAll('p');
+
+    projectElement.addEventListener('mouseover', () => {action('over')});
+    projectElement.addEventListener('mouseout', () => {action('out')});
+    function action(m) {
+        pElements.forEach((element) => {
+            m == 'over' ?
+            element.classList.add('transition'):
+            element.classList.remove('transition');
+        });
+    }
 };
